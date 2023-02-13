@@ -214,10 +214,6 @@ footer {
 
 
 /* Device breakpoint size */
-@media only screen and (max-width: 1024px) {
-
-}
-
 @media only screen and (max-width: 768px) {
     .navbar-container {
         width: 100%;
@@ -258,12 +254,10 @@ footer {
         flex-direction: column;
         flex-wrap: nowrap;
     }
-
-    .card {
-        width: 100%;
-    }
 }
 
 @media only screen and (max-width: 480px) {
-
+    .card {
+        width: 100%;
+    }
 }
