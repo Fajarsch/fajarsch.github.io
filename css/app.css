@@ -10,11 +10,23 @@
     list-style-type: none;
     font-family: "Lato", sans-serif;
     color: #fff;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: url("../img/bgshapes.svg") no-repeat center center fixed;
+    position: absolute;
+    background: url("../img/bgshape.svg") no-repeat center center fixed;
     background-size: cover;
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 0.2em;
+    background-color: #004747;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #008080;
 }
 
 /* Navigation bar */
@@ -56,37 +68,61 @@ nav.nav-list ul li button.button-menu {
     justify-content: space-between;
 }
 
-.content-image img {
+.content-home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.home h1.title-head {
+    font-size: 46px;
+    font-weight: 300;
+}
+
+.home p {
+    margin: 12px 0 2rem 0;
+    line-height: 1.5rem;
+    letter-spacing: .5px;
+}
+
+.content-home .image {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+
+.content-home .image img {
     width: 220px;
     border-radius: 50%;
 }
 
-.content-home {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem 0;
-}
-
-.content-home h1.title-head {
-    font-size: 36px;
-    font-weight: 300;
-}
-
-.content-image {
-    flex: 1;
-    display: flex;
-    justify-content: end;
-}
-
 button.cv-button {
     width: 8rem;
-    padding: 0.5rem 0;
+    padding: 12px 0;
     background-color: #008080;
+    font-weight: bold;
+    letter-spacing: 0.5px;
     border: 3px solid transparent;
     border-radius: 5px;
+    box-shadow: 4px 4px #000;
     transition: all 0.15s ease-in-out;
     cursor: pointer;
+}
+
+button.cv-button:hover {
+    background-color: #FFFFFF;
+    color: #008080;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px #000;
 }
 
 /* About */
@@ -99,7 +135,7 @@ button.cv-button {
 }
 
 .content-about img.about-img {
-    height: 150px;
+    height: 120px;
 }
 
 .content-about h3 {
@@ -171,11 +207,52 @@ button.cv-button {
     transition: all .15s ease-in-out;
 }
 
-@media only screen and (max-width: 500px) {
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 300;
+}
+
+
+/* Device breakpoint size */
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-container {
+        width: 100%;
+        padding: 1rem;
+    }
     .container {
         width: 100%;
         padding: 1rem;
         margin: 0;
+    }
+
+    .content-about img.about-img {
+        height: 120px;
+    }
+
+    .content-home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .content-home .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-block: 12px;
+    }
+
+    .content-home .image {
+        order: -1;
+    }
+    .content-home .image img {
+        width: 150px;
     }
 
     .card-container {
@@ -186,4 +263,8 @@ button.cv-button {
     .card {
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 480px) {
+
 }
