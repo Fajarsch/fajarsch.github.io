@@ -186,18 +186,18 @@ nav.nav-list ul li button.button-menu {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0 1rem;
+    gap: 1rem;
     justify-content: center;
     margin-top: 2rem;
 }
 
 .card {
     width: 250px;
+    height: 350px;
     padding: .5rem;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    margin-bottom: 1.5rem;
     background-color: var(--color-secondary);
 }
 
@@ -206,9 +206,21 @@ nav.nav-list ul li button.button-menu {
     border-radius: 10px 10px 0 0;
 }
 
-.card h3 {
-    margin: .5rem 0;
-    font-weight: 300;
+.card-project-name {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 1px;
+}
+
+.card-project-name h3.project-title {
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.card-project-name p.project-caption {
+    font-size: 9px;
+    margin-top: 3px;
 }
 
 .card button.button-card {
