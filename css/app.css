@@ -223,7 +223,7 @@ nav.nav-list ul li button.button-menu {
     margin-top: 3px;
 }
 
-.card button.button-card {
+.card .button-card {
     color: var(--color-black);
     background-color: var(--color-tertiary);
     margin: 1rem 0;
@@ -236,7 +236,7 @@ nav.nav-list ul li button.button-menu {
     transition: all .15s ease-in-out;
 }
 
-.card button.button-card:hover {
+.card .button-card:hover {
     background-color: var(--color-white);
     color: var(--color-secondary);
     transform: translate(2px, 2px);
