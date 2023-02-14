@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
 
+:root {
+    --color-primary: #004747;
+    --color-secondary: #008080;
+    --color-tertiary: #47F4F4;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+}
+
 *,
 *::before,
 *::after {
@@ -9,26 +17,24 @@
     text-decoration: none;
     list-style-type: none;
     font-family: "Lato", sans-serif;
-    color: #fff;
+    color: var(--color-white);
 }
 
 body {
-    /* background: url(../img/bgshape.svg) center center / cover no-repeat fixed; */
     background-image: url("../img/bgshape.svg");
     background-position: center center;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     background-size: cover;
     height: auto;
 }
 
 body::-webkit-scrollbar {
     width: 0.2em;
-    background-color: #004747;
+    background-color: var(--color-primary);
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #008080;
+    background-color: var(--color-secondary);
 }
 
 /* Navigation bar */
@@ -52,7 +58,7 @@ nav.nav-list ul {
 
 nav.nav-list ul li i {
     font-size: 22px;
-    color: #fff;
+    color: var(--color-white);
 }
 
 nav.nav-list ul li button.button-menu {
@@ -106,24 +112,25 @@ nav.nav-list ul li button.button-menu {
     border-radius: 50%;
 }
 
-button.cv-button {
+.cv-button {
     width: 8rem;
     padding: 12px 0;
-    background-color: #008080;
+    background-color: var(--color-secondary);
     font-weight: bold;
+    text-align: center;
     letter-spacing: 0.5px;
     border: 3px solid transparent;
     border-radius: 5px;
-    box-shadow: 4px 4px #000;
+    box-shadow: 4px 4px var(--color-black);
     transition: all 0.15s ease-in-out;
     cursor: pointer;
 }
 
-button.cv-button:hover {
-    background-color: #FFFFFF;
-    color: #008080;
+.cv-button:hover {
+    background-color: var(--color-white);
+    color: var(--color-secondary);
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px #000;
+    box-shadow: 2px 2px var(--color-black);
 }
 
 /* About */
@@ -191,7 +198,7 @@ button.cv-button:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     margin-bottom: 1.5rem;
-    background-color: #008080;
+    background-color: var(--color-secondary);
 }
 
 .card img {
@@ -205,23 +212,23 @@ button.cv-button:hover {
 }
 
 .card button.button-card {
-    color: #000;
-    background-color: #47F4F4;
+    color: var(--color-black);
+    background-color: var(--color-tertiary);
     margin: 1rem 0;
     padding: 7px 16px;
     font-weight: bold;
     border: 2px solid transparent;
     border-radius: 4px;
-    box-shadow: 4px 4px #000;
+    box-shadow: 4px 4px var(--color-black);
     cursor: pointer;
     transition: all .15s ease-in-out;
 }
 
 .card button.button-card:hover {
-    background-color: #39c7c7;
-    color: #414141;
+    background-color: var(--color-white);
+    color: var(--color-secondary);
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px #000;
+    box-shadow: 2px 2px var(--color-black);
 }
 
 .content-contact {
