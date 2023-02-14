@@ -10,14 +10,16 @@
     list-style-type: none;
     font-family: "Lato", sans-serif;
     color: #fff;
-    scroll-behavior: smooth;
 }
 
 body {
-    position: absolute;
-    background: url("../img/bgshape.svg") no-repeat center center fixed;
+    /* background: url(../img/bgshape.svg) center center / cover no-repeat fixed; */
+    background-image: url("../img/bgshape.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
     background-size: cover;
-    height: 100%;
+    height: auto;
 }
 
 body::-webkit-scrollbar {
@@ -61,7 +63,7 @@ nav.nav-list ul li button.button-menu {
 
 .container {
     width: 75%;
-    margin: 3rem auto;
+    margin: 2.5rem auto;
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -137,9 +139,9 @@ button.cv-button:hover {
     height: 120px;
 }
 
-.content-about h3 {
+.content-about h4 {
     text-align: center;
-    line-height: 2rem;
+    line-height: 1.5rem;
     font-weight: 400;
     letter-spacing: 1px;
 }
@@ -148,7 +150,7 @@ button.cv-button:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 /* Project */
@@ -158,12 +160,18 @@ button.cv-button:hover {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    gap: 25px;
+    gap: 0.8rem;
 }
 
-.content-project h2 {
+.content-project h2, .content-contact h2 {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.content-project p, .content-contact p {
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 .card-container {
@@ -173,6 +181,7 @@ button.cv-button:hover {
     align-items: center;
     gap: 0 1rem;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .card {
@@ -197,13 +206,39 @@ button.cv-button:hover {
 
 .card button.button-card {
     color: #000;
+    background-color: #47F4F4;
     margin: 1rem 0;
-    padding: 5px 14px;
+    padding: 7px 16px;
     font-weight: bold;
     border: 2px solid transparent;
     border-radius: 4px;
+    box-shadow: 4px 4px #000;
     cursor: pointer;
     transition: all .15s ease-in-out;
+}
+
+.card button.button-card:hover {
+    background-color: #39c7c7;
+    color: #414141;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px #000;
+}
+
+.content-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 0.8rem;
+}
+
+.content-contact .contact ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 1.6rem 0;
+    gap: 1rem;
 }
 
 footer {
@@ -216,13 +251,13 @@ footer {
 /* Device breakpoint size */
 @media only screen and (max-width: 768px) {
     .navbar-container {
-        width: 100%;
-        padding: 1rem;
+        width: 75%;
+        padding: 1rem 1.6rem;
     }
     .container {
-        width: 100%;
-        padding: 1rem;
-        margin: 0;
+        width: 75%;
+        padding: 1.6rem;
+        margin: 2rem auto;
     }
 
     .content-about img.about-img {
@@ -257,7 +292,18 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+    .navbar-container {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .container {
+        width: 90%;
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
     .card {
-        width: 100%;
+        width: 80%;
     }
 }
