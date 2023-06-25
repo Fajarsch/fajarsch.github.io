@@ -161,7 +161,7 @@ nav.nav-list ul li button.button-menu {
 }
 
 /* Project */
-.content-project {
+.content-project, .content-blog {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,6 +258,10 @@ nav.nav-list ul li button.button-menu {
     flex-wrap: nowrap;
     margin: 1.6rem 0;
     gap: 1rem;
+}
+
+.content-blog {
+
 }
 
 footer {
